@@ -29,6 +29,6 @@ public class EnderecoService {
     private String determinarApiUrl(String cep) {
         // Lógica para determinar qual API utilizar baseada nas configurações
         // Implemente aqui a lógica de acordo com as configurações fornecidas
-        return "URL_DA_API"; // Substitua "URL_DA_API" pela URL correta da API
+        return "https://viacep.com.br/\n"; // Substitua "URL_DA_API" pela URL correta da API
     }
 }
