@@ -1,4 +1,4 @@
-package repositotory;
+package repository;
 
 import model.Endereco;
 import org.springframework.data.jpa.repository.JpaRepository;
