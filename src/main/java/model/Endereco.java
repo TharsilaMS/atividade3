@@ -2,14 +2,12 @@ package model;
 
 import jakarta.persistence.Entity;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import org.springframework.data.annotation.Id;
 
-@Getter
-@Setter
 @Data
 @Entity
 public class Endereco {
+    @Id
     private Long id;
     private String cep;
     private String rua;
