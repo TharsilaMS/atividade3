@@ -1,20 +1,17 @@
 package model;
 
 import jakarta.persistence.Entity;
+import lombok.Builder;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 @Data
 @Entity
+@Builder
 public class Endereco {
-    @Id
-    private Long id;
-    private String cep;
-    private String rua;
+    private String logradouro;
+    private Integer numero;
+    private String estado;
     private String cidade;
     private String bairro;
-    private String estado;
-    private String uf;
-
-
+    private String cep;
 }
