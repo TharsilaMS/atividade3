@@ -10,6 +10,6 @@ public class CepAberto {
     private String logradouro;
     private String complemento;
     private String bairro;
-
+    private String cidade;
+    private String estado;
 }
-

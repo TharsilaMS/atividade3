@@ -1,23 +1,32 @@
 package service.implement;
+
 import controller.response.CepAberto;
 import model.Endereco;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
-
-
 
 public class CepAbertoImplement implements ExternalCepRestService {
     @Override
     public Endereco searchByCep(String cep) {
-        return Endereco.builder()
-                .logradouro("Cep Aberto")
-                .cep(cep)
-                .build();
+        String CEP_ABERTO_URL = "https://www.cepaberto.com/api/v3/cep?cep=" + cep+ "/json";
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("Authorization","Token token=94053b879c9114bc25de8d8f59d82db7");
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+        ResponseEntity<CepAberto> response = restTemplate.exchange(CEP_ABERTO_URL, HttpMethod.GET, entity, CepAberto.class, cep);
+        if (response.getStatusCode() == HttpStatus.OK) {
+            CepAberto cepAbertoResponse = response.getBody();
+            if (cepAbertoResponse != null) {
+                return Endereco.builder()
+                        .logradouro(cepAbertoResponse.getLogradouro())
+                        .numero(null)
+                        .estado(cepAbertoResponse.getEstado())
+                        .cidade(cepAbertoResponse.getCidade())
+                        .bairro(cepAbertoResponse.getBairro())
+                        .cep(cep)
+                        .build();
+            }
+        }
+        return null;
     }
 }
-
-
-

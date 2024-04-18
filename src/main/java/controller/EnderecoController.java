@@ -21,9 +21,13 @@ public class EnderecoController {
     public ResponseEntity<Endereco> buscarEnderecoPorCep(@PathVariable String cep) {
         try {
             Endereco endereco = enderecoService.searchEndereco(cep);
-            return ResponseEntity.ok(endereco);
+            if (endereco != null) {
+                return ResponseEntity.ok(endereco);
+            } else {
+                return ResponseEntity.notFound().build();
+            }
         } catch (RuntimeException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 }

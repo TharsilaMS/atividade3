@@ -1,6 +1,6 @@
 package model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
 
@@ -8,7 +8,12 @@ import lombok.Data;
 @Entity
 @Builder
 public class Endereco {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column
     private String logradouro;
+    @Column
     private Integer numero;
     private String estado;
     private String cidade;
