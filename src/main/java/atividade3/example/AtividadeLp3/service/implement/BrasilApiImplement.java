@@ -13,12 +13,12 @@ public class BrasilApiImplement implements ExternalCepRestService {
         if (brasilApiResponse != null) {
             return Endereco.builder()
                     .logradouro(brasilApiResponse.getLogradouro())
-                    .numero(null)
                     .estado(brasilApiResponse.getUf())
                     .cidade(brasilApiResponse.getLocalidade())
                     .bairro(brasilApiResponse.getBairro())
                     .cep(cep)
                     .build();
+
         }
         return null;
     }

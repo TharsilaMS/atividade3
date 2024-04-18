@@ -19,12 +19,12 @@ public class CepAbertoImplement implements ExternalCepRestService {
             if (cepAbertoResponse != null) {
                 return Endereco.builder()
                         .logradouro(cepAbertoResponse.getLogradouro())
-                        .numero(null)
                         .estado(cepAbertoResponse.getEstado())
                         .cidade(cepAbertoResponse.getCidade())
                         .bairro(cepAbertoResponse.getBairro())
                         .cep(cep)
                         .build();
+
             }
         }
         return null;

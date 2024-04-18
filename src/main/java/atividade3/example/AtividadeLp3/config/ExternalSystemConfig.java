@@ -20,12 +20,13 @@ public class ExternalSystemConfig {
     @Bean
     public Map<String, ExternalCepRestService> externalSystemBean() {
         return Map.of(
+                "BRASILAPI",
+                new BrasilApiImplement(),
                 "VIACEP",
                 new ViaCepImplement(),
                 "CEPABERTO",
-                new CepAbertoImplement(),
-                "BRASILAPI",
-                new BrasilApiImplement()
+                new CepAbertoImplement()
+
         );
     }
 

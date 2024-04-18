@@ -12,5 +12,12 @@ public class ViaCep {
     private String bairro;
     private String localidade;
     private String uf;
-
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "logradouro='" + logradouro + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", cep='" + cep + '\'' +
+                '}';
+    }
 }

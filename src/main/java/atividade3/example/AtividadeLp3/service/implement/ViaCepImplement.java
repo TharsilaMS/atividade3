@@ -13,12 +13,12 @@ public class ViaCepImplement implements ExternalCepRestService {
         if (viaCepResponse != null) {
             return Endereco.builder()
                     .logradouro(viaCepResponse.getLogradouro())
-                    .numero(null)
                     .estado(viaCepResponse.getUf())
                     .cidade(viaCepResponse.getLocalidade())
                     .bairro(viaCepResponse.getBairro())
                     .cep(cep)
                     .build();
+
         }
         return null;
     }
