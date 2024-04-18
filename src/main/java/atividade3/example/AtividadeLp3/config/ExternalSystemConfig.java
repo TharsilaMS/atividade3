@@ -1,13 +1,15 @@
 package atividade3.example.AtividadeLp3.config;
 
+
+import atividade3.example.AtividadeLp3.service.implement.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
-import service.implement.*;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 import java.util.Map;
-
+@Configuration
 public class ExternalSystemConfig {
     @Value("${app.cep.api}")
     private String apiConfig;

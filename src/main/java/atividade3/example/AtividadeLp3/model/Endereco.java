@@ -1,4 +1,4 @@
-package model;
+package atividade3.example.AtividadeLp3.model;
 
 import jakarta.persistence.*;
 import lombok.Builder;

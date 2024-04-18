@@ -1,8 +1,8 @@
-package service.implement;
+package atividade3.example.AtividadeLp3.service.implement;
 
 
 import lombok.RequiredArgsConstructor;
-import model.Endereco;
+import atividade3.example.AtividadeLp3.model.Endereco;
 
 
 import java.util.List;

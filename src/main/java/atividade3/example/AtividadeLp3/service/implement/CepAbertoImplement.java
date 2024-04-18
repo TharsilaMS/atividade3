@@ -1,7 +1,7 @@
-package service.implement;
+package atividade3.example.AtividadeLp3.service.implement;
 
-import controller.response.CepAberto;
-import model.Endereco;
+import atividade3.example.AtividadeLp3.controller.response.CepAberto;
+import atividade3.example.AtividadeLp3.model.Endereco;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 

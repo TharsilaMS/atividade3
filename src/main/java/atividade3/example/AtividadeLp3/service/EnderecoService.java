@@ -1,11 +1,11 @@
-package service;
+package atividade3.example.AtividadeLp3.service;
 
 
+import atividade3.example.AtividadeLp3.service.implement.ExternalCepRestService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import model.Endereco;
+import atividade3.example.AtividadeLp3.model.Endereco;
 import org.springframework.stereotype.Service;
-import service.implement.ExternalCepRestService;
 
 @Service
 @RequiredArgsConstructor

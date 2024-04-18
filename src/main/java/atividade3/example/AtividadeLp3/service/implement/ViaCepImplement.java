@@ -1,7 +1,7 @@
-package service.implement;
+package atividade3.example.AtividadeLp3.service.implement;
 
-import controller.response.ViaCep;
-import model.Endereco;
+import atividade3.example.AtividadeLp3.controller.response.ViaCep;
+import atividade3.example.AtividadeLp3.model.Endereco;
 import org.springframework.web.client.RestTemplate;
 
 public class ViaCepImplement implements ExternalCepRestService {
